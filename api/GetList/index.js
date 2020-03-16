@@ -2,6 +2,6 @@ module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     context.res = {
-        body: ["Jarod", "Hannah", "Kevin", "Mitch", "chris", "Joe", "Mitali", "Annaji", 1, 2, 3, 4]
+        body: new Array(100).fill(0).map((a,b) => b)
     }
 };
