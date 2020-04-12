@@ -23,7 +23,7 @@ jobs:
     - uses: BrandonHopcraft/anotherdeploy@master
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_WITTY_BUSH_019537B1E }}
-        action: 'upload --verbose'         
+        action: 'upload'         
         app_artifact_location: 'app/build'
         api_artifact_location: 'api'
   
