@@ -24,9 +24,10 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
         action: 'upload'
         ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
-        app_location: '{{appLocation}}' # App source code path
-        api_location: '{{apiLocation}}' # Api source code path - optional
-        app_artifact_location: '{{appArtifactLocation}}' # Built app content directory - optional
+        app_location: 'app' # App source code path
+        api_location: 'api' # Api source code path - optional
+        app_artifact_location: 'build' # Built app content directory - optional
+        app_build_command: 'npm run prodbuild'
         ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
