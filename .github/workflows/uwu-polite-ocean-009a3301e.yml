@@ -32,10 +32,8 @@ jobs:
           app_artifact_location: 'build' # Built app content directory - optional
           app_build_command: 'npm run prodbuild'
           build_timeout_in_minutes: '0'
+          ignore_missing_api_token: true
           ###### End of Repository/Build Configurations ######
-        env:
-          ignoreMissingApiKey: true
-          IGNORE_MISSING_API_TOKEN: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -48,6 +46,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_POLITE_OCEAN_009A3301E }}
           action: "close"
-        env:
-          ignoreMissingApiKey: true
-          IGNORE_MISSING_API_TOKEN: true
+          ignore_missing_api_token: true
