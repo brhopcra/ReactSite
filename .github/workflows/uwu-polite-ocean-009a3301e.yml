@@ -32,6 +32,7 @@ jobs:
           app_artifact_location: 'build' # Built app content directory - optional
           app_build_command: 'npm run prodbuild'
           build_timeout_in_minutes: 1
+          ignore_missing_api_token: true
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
